@@ -28,5 +28,5 @@ sudo -u centos bash << EOF
 /usr/local/bin/minikube start --driver=docker
 cd /home/centos/K8/minikube-aws/K8
 kubectl create -f sample-deployment.yaml
-kubectl create -f sample-nodeport-service.yaml
+kubectl create -f sample-lb-service.yaml
 EOF

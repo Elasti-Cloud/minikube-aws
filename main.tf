@@ -55,8 +55,8 @@ resource "aws_security_group" "sg_minikube" {
     cidr_blocks = [var.admin_ip]
   }
   ingress {
-    from_port   = 30080
-    to_port     = 30080
+    from_port   = 80
+    to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }

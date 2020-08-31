@@ -1,4 +1,3 @@
-# Main
 variable "profile" {
   description = "Name of the local AWS profile"
   type        = string

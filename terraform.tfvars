@@ -8,9 +8,11 @@ network = {
   vpc_az      = "us-east-2b"
 }
 inst_params = {
-  ami      = "ami-01e36b7901e884a10"
-  type     = "t3.micro"
-  key_name = "minikube"
+  ami        = "ami-01e36b7901e884a10"
+  type       = "m5.large"
+  key_name   = "minikube"
+  spot_price = "0.03"
+  spot_type  = "one-time"
 }
 
 tags = {

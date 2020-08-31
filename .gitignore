@@ -1,6 +1,7 @@
 LOCAL.tfvars
 ready.tfplan
 .terraform
+K8
 terraform.tfstate
 terraform.tfstate.backup
 bootstrap copy.sh

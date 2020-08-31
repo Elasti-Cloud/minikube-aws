@@ -79,8 +79,8 @@ resource "aws_spot_instance_request" "minikube" {
   vpc_security_group_ids = [aws_security_group.sg_minikube.id]
   tags                   = var.tags
   # spot request parameters
-  spot_price = "0.03"
-  spot_type  = "one-time"
+  spot_price = var.inst_params["spot_price"]
+  spot_type  = var.inst_params["spot_type"]
 
   # User Data for the CentOS 7
   user_data = filebase64("./bootstrap.sh")

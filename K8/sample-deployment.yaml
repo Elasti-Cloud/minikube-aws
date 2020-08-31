@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-httpd-dep
+  labels:
+    app: sample    
+spec:
+  selector: 
+    matchLabels:
+      app: sample
+  template:
+    metadata:
+      name: httpd-pod
+      labels:
+        app: sample
+    spec:
+      containers:
+        - name: httpd
+          image: httpd
+  replicas: 2

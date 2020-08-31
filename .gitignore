@@ -1,0 +1,6 @@
+LOCAL.tfvars
+ready.tfplan
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+bootstrap copy.sh

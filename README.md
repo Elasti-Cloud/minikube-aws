@@ -1,8 +1,8 @@
 # Deploying Minikube on an AWS instance with Terraform
 
-#### * For the convinience, it is a ready-to-use deployment. However, most parameters can be adjusted. The purpose is to quickly deploy a Minikube standalone node * for the learning purposes.
-#### Please refer to the official documentation in case you want to use Ubuntu or newer * releases: [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)  
-#### Provisioned infrastructure will result in costs
+#### - For the convinience, it is a ready-to-use deployment. However, most parameters can be adjusted. The purpose is to quickly deploy a Minikube standalone node for the learning purposes.
+#### - Please refer to the official documentation in case you want to use Ubuntu or newer releases: [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)  
+#### - Provisioned infrastructure will result in costs
 
 ### Prerequisites:
 * An AWS account and a user with a porgrammatic access;

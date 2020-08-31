@@ -20,4 +20,13 @@ yum install -y kubectl
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64   && chmod +x minikube
 mkdir -p /usr/local/bin/
 install minikube /usr/local/bin/
-sudo -u centos /usr/local/bin/minikube start --driver=docker
+mkdir -p /home/centos/K8
+cd /home/centos/K8
+yum install git -y
+git clone https://github.com/Elasti-Cloud/minikube-aws.git
+sudo -u centos bash << EOF
+/usr/local/bin/minikube start --driver=docker
+cd /home/centos/K8/minikube-aws/K8
+kubectl create -f sample-deployment.yaml
+kubectl create -f sample-nodeport-service.yaml
+EOF

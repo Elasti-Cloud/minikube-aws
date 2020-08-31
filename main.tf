@@ -9,9 +9,6 @@ provider "aws" {
   region  = var.region
 }
 
-provider "time" {
-  version = ">= 0.5.0"
-}
 # ////////////////////////////////////////////
 # VPC, Subnet, IGW, RT
 resource "aws_vpc" "vpc" {
@@ -58,8 +55,8 @@ resource "aws_security_group" "sg_minikube" {
     cidr_blocks = [var.admin_ip]
   }
   ingress {
-    from_port   = 80
-    to_port     = 80
+    from_port   = 30080
+    to_port     = 30080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -88,8 +85,4 @@ resource "aws_spot_instance_request" "minikube" {
   # User Data for the CentOS 7
   user_data = filebase64("./bootstrap.sh")
 
-}
-
-resource "time_sleep" "wait_10_seconds" {
-  create_duration = "10s"
 }

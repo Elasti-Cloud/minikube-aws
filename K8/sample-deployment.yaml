@@ -17,4 +17,6 @@ spec:
       containers:
         - name: httpd
           image: httpd
+          ports:
+            - containerPort: 80
   replicas: 2

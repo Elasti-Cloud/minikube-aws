@@ -25,3 +25,4 @@
 
 #### Notes
 * to create an AWS profile run __*aws configure --profile*__ *chosen-profile-name* and enter credentials;
+* if you do not see the instance and respective spor request is in the closed state then: terminate infrastracture, change az (a-b-c) and deploy again;
